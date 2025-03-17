@@ -9,18 +9,18 @@ def encode_image(image_path):
 def generate_horoscope(image_path):
     """ Send encoded image to Ollama for palmistry-based horoscope """
     image_base64 = encode_image(image_path)
-    
-    prompt = "Analyze the following hand image based on Hindu palmistry and provide a horoscope."
-    
+
     response = ollama.chat(
         model="llava",
-        messages=[{"role": "user", "content": prompt + "\n[IMAGE_DATA]"}],
+        messages=[
+            {"role": "user", "content": "Analyze the following hand image based on Hindu palmistry and provide a horoscope."},
+            {"role": "user", "images": [image_base64]}
+        ],
     )
     
     return response['message']['content']
 
-# User Input: Image Path
-image_path = "hand.jpeg"  # Replace with your image path
+image_path = "hand1.jpeg"
 horoscope = generate_horoscope(image_path)
 
 print("\nGenerated Horoscope:\n", horoscope)
