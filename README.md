@@ -70,7 +70,7 @@ Have ideas to improve the project? Feel free to **fork**, submit issues, or cont
 ---
 
 ## 📧 Contact:
-For any queries, reach out at **your-email@example.com** or open an issue on GitHub.
+For any queries, reach out at **sahilsinghrangra96@gmail.com** or open an issue on GitHub.
 
 Happy coding! 🚀
 
